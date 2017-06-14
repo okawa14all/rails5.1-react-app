@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root to: 'tasks#index'
+  root to: 'todos#index'
 end
