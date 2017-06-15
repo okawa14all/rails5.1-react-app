@@ -15,7 +15,7 @@ const TodoList = ({ todos }) => (
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(
     PropTypes.shape({
-      title: PropTypes.string.isRequired
+      text: PropTypes.string.isRequired
     }).isRequired
   ).isRequired
 }

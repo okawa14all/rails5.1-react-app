@@ -1,4 +1,4 @@
 %h1 Todos#index
 %p Find me in app/views/todos/index.html.haml
 
-= react_component('TodoAppRoot', todos: @todos)
+= react_component('TodoAppRoot', todos: @todos.map {|todo| { id: todo.id, text: todo.text, completed: todo.completed } })
