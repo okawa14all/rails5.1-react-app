@@ -1,0 +1,4 @@
+require "pathname"
+Pathname.glob("db/schema/*.schema").each do |path|
+  require path.basename.to_s
+end
