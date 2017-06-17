@@ -1,5 +1,6 @@
 import actionTypes from '../actions/actionTypes'
 import { combineReducers } from 'redux'
+import { reducer as formReducer } from 'redux-form'
 
 const todos = (state = [], action) => {
   switch (action.type) {
@@ -21,7 +22,8 @@ const visibilityFilter = (state = 'SHOW_ALL', action) => {
 
 const todoAppReducer = combineReducers({
   todos,
-  visibilityFilter
+  visibilityFilter,
+  form: formReducer
 })
 
 export default todoAppReducer
