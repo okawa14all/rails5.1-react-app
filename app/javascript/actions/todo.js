@@ -1,19 +1,21 @@
+import actionTypes from './actionTypes'
+
 export const fetchTodo = (todos) => ({
-  type: 'FETCH_TODO',
+  type: actionTypes.FETCH_TODO,
   todos
 })
 
 export const addTodo = (text) => ({
-  type: 'ADD_TODO',
+  type: actionTypes.ADD_TODO,
   text
 })
 
 export const setVisibilityFilter = (filter) => ({
-  type: 'SET_VISIBILITY_FILTER',
+  type: actionTypes.SET_VISIBILITY_FILTER,
   filter
 })
 
 export const toggleTodo = (id) => ({
-  type: 'TOGGLE_TODO',
+  type: actionTypes.TOGGLE_TODO,
   id
 })
