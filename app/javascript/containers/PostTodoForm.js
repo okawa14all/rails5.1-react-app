@@ -1,9 +1,9 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import { addTodo } from '../actions/todo'
+import { requestPostTodo } from '../actions/todo'
 
 const submit = (params, dispatch) => {
-  dispatch(addTodo(params));
+  dispatch(requestPostTodo(params));
 }
 
 let PostTodoForm = props => {

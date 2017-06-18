@@ -6,8 +6,14 @@ const todos = (state = [], action) => {
   switch (action.type) {
     case actionTypes.FETCH_TODO:
       return Object.assign([], state, action.todos)
-    case actionTypes.ADD_TODO:
-      return [ action.payload.params, ...state ]
+    case actionTypes.POST_TODO_SUCCESS:
+      console.log('***** SUCCESS')
+      console.log(action.todo)
+      return [ action.todo, ...state ]
+    case actionTypes.POST_TODO_FAILURE:
+      console.log('***** ERROR')
+      console.log(action.payload)
+      return state
     default:
       return state
   }

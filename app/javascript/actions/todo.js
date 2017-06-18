@@ -5,8 +5,18 @@ export const fetchTodo = (todos) => ({
   todos
 })
 
-export const addTodo = (params) => ({
-  type: actionTypes.ADD_TODO,
+export const requestPostTodo = (params) => ({
+  type: actionTypes.POST_TODO_REQUEST,
+  payload: { params }
+})
+
+export const successPostTodo = (todo) => ({
+  type: actionTypes.POST_TODO_SUCCESS,
+  todo
+})
+
+export const failurePostTodo = (params) => ({
+  type: actionTypes.POST_TODO_FAILURE,
   payload: { params }
 })
 

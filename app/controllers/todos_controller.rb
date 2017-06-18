@@ -1,4 +1,6 @@
 class TodosController < ApplicationController
+  protect_from_forgery except: [:create]
+
   def index
     @todos = Todo.all
   end
@@ -10,7 +12,7 @@ class TodosController < ApplicationController
         redirect_to root_path
       }
       format.json {
-        head 204
+        render json: @todo, status: :created
       }
     end
   end
