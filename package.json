@@ -32,6 +32,7 @@
     "react_ujs": "^2.2.0",
     "redux": "^3.6.0",
     "redux-form": "^6.8.0",
+    "redux-saga": "^0.15.3",
     "resolve-url-loader": "^2.0.2",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.2",
