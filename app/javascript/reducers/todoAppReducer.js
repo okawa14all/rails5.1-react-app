@@ -6,6 +6,8 @@ const todos = (state = [], action) => {
   switch (action.type) {
     case actionTypes.FETCH_TODO:
       return Object.assign([], state, action.todos)
+    case actionTypes.ADD_TODO:
+      return [ action.payload.params, ...state ]
     default:
       return state
   }

@@ -5,9 +5,9 @@ export const fetchTodo = (todos) => ({
   todos
 })
 
-export const addTodo = (text) => ({
+export const addTodo = (params) => ({
   type: actionTypes.ADD_TODO,
-  text
+  payload: { params }
 })
 
 export const setVisibilityFilter = (filter) => ({
