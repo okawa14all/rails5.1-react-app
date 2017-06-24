@@ -7,11 +7,14 @@ const submit = (params, dispatch) => {
 }
 
 let PostTodoForm = props => {
-  const { handleSubmit } = props
+  const { handleSubmit, dispatch } = props
   return (
     <form onSubmit={ handleSubmit(submit) }>
       <div>
-        <Field name="text" component="input" type="text" />
+        <Field name="text" component="input" type="text" onChange={ e => {
+          console.log(e.target.value)
+          dispatch({type: 'HOGE', hoge: 'hoge'})
+        }} />
       </div>
       <button type="submit">Submit</button>
     </form>

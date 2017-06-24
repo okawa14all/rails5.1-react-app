@@ -14,6 +14,8 @@ const todos = (state = [], action) => {
       console.log('***** ERROR')
       console.log(action.payload)
       return state
+    case 'HOGE':
+      console.log('hoge')
     default:
       return state
   }
